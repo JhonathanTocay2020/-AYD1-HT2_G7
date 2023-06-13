@@ -37,6 +37,17 @@ app.post("/primo-201807420", (req, res) => {
   res.json(respuesta);
 });
 
+app.get('/info-201801268', (req, res) => {
+  let integrantes = [
+      { id: "201801268", nombre: "Jhonathan Daniel Tocay Cotzojay" },
+      { id: "201807420", nombre: "David Roberto Diaz Prado" },
+      { id: "201900122", nombre: "Herbert Steve González Camey" },
+      { id: "201900172", nombre: "Melani Alejandra López de la Roca" }
+  ];
+
+  res.json(integrantes);
+});
+
 //endpoint de prueba
 app.get("/", (req, res) => {
   res.json({
