@@ -20,19 +20,19 @@ function esNumeroPrimo(numero) {
   }
   return true;
 }
-//1er endpoint suma de 2 valores 
-app.post('/suma-201900172', (req, res) => {
-  console.log(req.body)
-  suma = req.body.num1 + req.body.num2
-  res.send('Suma ' + suma)
-})
+//1er endpoint suma de 2 valores
+app.post("/multiplicar-201900172", (req, res) => {
+  console.log(req.body);
+  suma = req.body.num1 * req.body.num2;
+  res.send("Multiplica " + suma);
+});
 
-//2do endpoint resta de 2 valores 
-app.post('/resta-201900122', (req, res) => {
-  console.log(req.body)
-  resta = req.body.num1 - req.body.num2
-  res.send('Resta ' + resta)
-})
+//2do endpoint resta de 2 valores
+app.post("/resta-201900122", (req, res) => {
+  console.log(req.body);
+  resta = req.body.num1 - req.body.num2;
+  res.send("Resta " + resta);
+});
 
 //4to endpoint recibe numero y evalua que si es primo o no
 app.post("/primo-201807420", (req, res) => {
@@ -50,12 +50,12 @@ app.post("/primo-201807420", (req, res) => {
   res.json(respuesta);
 });
 
-app.get('/info-201801268', (req, res) => {
+app.get("/info-201801268", (req, res) => {
   let integrantes = [
-      { id: "201801268", nombre: "Jhonathan Daniel Tocay Cotzojay" },
-      { id: "201807420", nombre: "David Roberto Diaz Prado" },
-      { id: "201900122", nombre: "Herbert Steve González Camey" },
-      { id: "201900172", nombre: "Melani Alejandra López de la Roca" }
+    { id: "201801268", nombre: "Jhonathan Daniel Tocay Cotzojay" },
+    { id: "201807420", nombre: "David Roberto Diaz Prado" },
+    { id: "201900122", nombre: "Herbert Steve González Camey" },
+    { id: "201900172", nombre: "Melani Alejandra López de la Roca" },
   ];
 
   res.json(integrantes);
