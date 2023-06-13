@@ -20,6 +20,12 @@ function esNumeroPrimo(numero) {
   }
   return true;
 }
+//1er endpoint suma de 2 valores 
+app.post('/suma-201900172', (req, res) => {
+  console.log(req.body)
+  suma = req.body.num1 + req.body.num2
+  res.send('Suma ' + suma)
+})
 
 //4to endpoint recibe numero y evalua que si es primo o no
 app.post("/primo-201807420", (req, res) => {
