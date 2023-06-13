@@ -27,6 +27,13 @@ app.post('/suma-201900172', (req, res) => {
   res.send('Suma ' + suma)
 })
 
+//2do endpoint resta de 2 valores 
+app.post('/resta-201900122', (req, res) => {
+  console.log(req.body)
+  resta = req.body.num1 - req.body.num2
+  res.send('Resta ' + resta)
+})
+
 //4to endpoint recibe numero y evalua que si es primo o no
 app.post("/primo-201807420", (req, res) => {
   const numero = req.body.numero;
